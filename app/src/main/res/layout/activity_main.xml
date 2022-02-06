@@ -23,7 +23,10 @@
             android:fontFamily="casual"
             android:textSize="80px"
             android:layout_marginLeft="5px"
+            android:textColor="@color/black"
+
             android:padding="10px"
+            android:textAlignment="center"
 
             />
 
@@ -34,6 +37,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/Primary"
         android:orientation="horizontal">
 
         <LinearLayout
@@ -45,12 +49,17 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textStyle="bold"
                 android:textAlignment="center"
                 android:text="Jugador Uno"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:id="@+id/playerOneScore"
                 android:text="0"/>
         </LinearLayout>
 
@@ -63,129 +72,158 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textStyle="bold"
                 android:textAlignment="center"
                 android:text="Jugador Dos"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:id="@+id/playerTwoScore"
                 android:text="0"/>
         </LinearLayout>
 
     </LinearLayout>
     <!--Fin de contenedor jugadores y puntos-->
 
-    <!--contenedor mensaje de ganador -->
+
+
+    <!--COntenedor-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:text="Gano ,jugador uno"/>
-    </LinearLayout>
-    <!--fin de contenedor ganador-->
-
-    <!--Contenedor game -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/Primary"
-
+        android:layout_height="match_parent"
+        android:layout_weight=".2"
+        android:gravity="center"
         android:orientation="vertical">
+        <!--Contenedor game -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
 
-            android:orientation="horizontal">
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10px"
-                android:layout_marginBottom="0px"
-                android:background="@color/Primary"
-                android:textColor="@color/black"
-                android:layout_weight="1"
-                android:text="X"/>
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10px"
-                android:background="@color/Primary"
-                android:textColor="@color/black"
-                android:layout_weight="1"
-                android:text="X"/>
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/Primary"
-                android:textColor="@color/black"
-                android:layout_weight="1"
-                android:text="X"/>
-        </LinearLayout>
+            android:background="@color/Primary"
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10px"
-            android:orientation="horizontal">
-            <Button
+            android:orientation="vertical">
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="10px"
-                android:background="@color/Primary"
-                android:textColor="@color/black"
-                android:layout_weight="1"
-                android:text="X"/>
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10px"
-                android:background="@color/Primary"
-                android:textColor="@color/black"
-                android:layout_weight="1"
-                android:text="X"/>
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/Primary"
-                android:textColor="@color/black"
-                android:layout_weight="1"
-                android:text="X"/>
-        </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10px"
-            android:orientation="horizontal">
-            <Button
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/btn_0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10px"
+
+                    android:background="@color/Primary"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:text=""/>
+                <Button
+                    android:id="@+id/btn_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10px"
+                    android:background="@color/Primary"
+                    android:textColor="@color/black"
+                    android:layout_weight="1"
+                    android:text=""/>
+                <Button
+                    android:id="@+id/btn_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/Primary"
+                    android:textColor="@color/black"
+                    android:layout_weight="1"
+                    android:text=""/>
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/Primary"
-                android:layout_marginRight="10px"
-                android:textColor="@color/black"
-                android:layout_weight="1"
-                android:text="X"/>
-            <Button
+                android:layout_marginTop="10px"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/btn_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10px"
+                    android:background="@color/Primary"
+                    android:textColor="@color/black"
+                    android:layout_weight="1"
+                    android:text=""/>
+                <Button
+                    android:id="@+id/btn_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10px"
+                    android:background="@color/Primary"
+                    android:textColor="@color/black"
+                    android:layout_weight="1"
+                    android:text=""/>
+                <Button
+                    android:id="@+id/btn_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/Primary"
+                    android:textColor="@color/black"
+                    android:layout_weight="1"
+                    android:text=""/>
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="10px"
-                android:background="@color/Primary"
-                android:textColor="@color/black"
-                android:layout_weight="1"
-                android:text="X"/>
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/Primary"
-                android:textColor="@color/black"
-                android:layout_weight="1"
-                android:text="X"/>
+                android:layout_marginTop="10px"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/btn_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/Primary"
+                    android:layout_marginRight="10px"
+                    android:textColor="@color/black"
+                    android:layout_weight="1"
+                    android:text=""/>
+                <Button
+                    android:id="@+id/btn_7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10px"
+                    android:background="@color/Primary"
+                    android:textColor="@color/black"
+                    android:layout_weight="1"
+                    android:text=""/>
+                <Button
+                    android:id="@+id/btn_8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/Primary"
+                    android:textColor="@color/black"
+                    android:layout_weight="1"
+                    android:text=""/>
+            </LinearLayout>
         </LinearLayout>
+        <!--fin Contenedor game -->
     </LinearLayout>
-    <!--fin Contenedor game -->
+    <!--FIN CONTENEDOR -->
+
+
+    <!--CONTENEDOR BUTTON RECET -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="match_parent">
+        <Button
+            android:id="@+id/btnRecet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="Reiniciar"
+            android:textColor="@color/black"/>
+    </LinearLayout>
 
 </LinearLayout>
