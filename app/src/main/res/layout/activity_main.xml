@@ -86,8 +86,17 @@
                 android:text="0"/>
         </LinearLayout>
 
+
     </LinearLayout>
     <!--Fin de contenedor jugadores y puntos-->
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="10px"
+        android:text=""
+        android:backgroundTint="@color/black"
+        android:background="@color/black"/>
+
 
 
 
@@ -212,10 +221,11 @@
     <!--FIN CONTENEDOR -->
 
 
-    <!--CONTENEDOR BUTTON RECET -->
+    <!--CONTENEDOR BUTTON RECET speak -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_weight="1"
+        android:padding="10px"
         android:layout_height="match_parent">
         <Button
             android:id="@+id/btnVoice"
@@ -223,16 +233,20 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:text="Speack"
+            android:layout_marginRight="5px"
             android:layout_weight="1"
-            android:textColor="@color/black"/>
+            android:backgroundTint="@color/Primary"
+            android:textColor="@color/white"/>
         <Button
             android:id="@+id/btnRecet"
             android:layout_width="match_parent"
+            android:backgroundTint="@color/Primary"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
+            android:layout_marginLeft="5px"
             android:text="Reiniciar"
             android:layout_weight="1"
-            android:textColor="@color/black"/>
+            android:textColor="@color/white"/>
     </LinearLayout>
 
 </LinearLayout>
